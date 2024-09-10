@@ -11,7 +11,7 @@
     </div>
     <div class="d-flex align-items-center ms-auto gap-2">
       <div
-        class="btn btn-dark d-flex justify-content-cetner p-2"
+        class="btn btn-color d-flex justify-content-cetner p-2"
         @click="selectUser(item)"
       >
         상세
