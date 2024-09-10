@@ -41,9 +41,9 @@
     />
   </div>
   <div class="d-flex justify-content-center gap-3">
-    <div class="btn btn-dark" @click="addUser">등록</div>
-    <div class="btn btn-dark" @click="updateUser">수정</div>
-    <div class="btn btn-dark" @click="$store.commit('openMapModal')">
+    <div class="btn btn-color" @click="addUser">등록</div>
+    <div class="btn btn-color" @click="updateUser">수정</div>
+    <div class="btn btn-color" @click="$store.commit('openMapModal')">
       주소 선택
     </div>
   </div>

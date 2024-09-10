@@ -31,10 +31,13 @@
 
 <style lang="scss" scoped>
 .navbar {
-  background-color: #fff;
+  background-color: var(--main-color);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  .container {
-    color: white;
+  a {
+    color: #ffffff;
+  }
+  .nav-link {
+    color: #ffffff;
   }
 }
 .router-link-active {
