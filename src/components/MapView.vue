@@ -16,8 +16,8 @@
             $store.commit('closeMapModal')
         "
       >
-        현재 좌표:
-        {{ latitude }}
+        좌표:
+        {{ latitude }} /
         {{ longitude }}
       </div>
     </div>
@@ -52,6 +52,7 @@ onMounted(() => {
 
   const initMap = () => {
     const container = document.getElementById("map"); //지도를 담을 영역의 DOM 레퍼런스
+
     let options = {
       //지도를 생성할 때 필요한 기본 옵션
       center: new kakao.maps.LatLng(latitude.value, longitude.value), //지도의 중심좌표.
@@ -98,25 +99,5 @@ onMounted(() => {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  #map {
-    position: relative;
-    border-radius: 5px;
-    @media screen and (max-width: 570px) {
-      width: 90%;
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 10px;
-      height: 10px;
-      z-index: 999;
-      border-radius: 50%;
-      border: 2px solid white;
-      transform: translate(-50%, -50%); // 정확히 중앙에 위치하도록 조정
-      background-color: red;
-    }
-  }
 }
 </style>

@@ -1,0 +1,47 @@
+:root {
+  --main-color: #f29f05;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-family: "Noto Sans KR", sans-serif;
+}
+#app {
+  height: 100%;
+}
+.btn-color {
+  background: var(--main-color);
+  color: #ffffff;
+  transition: 0.3s;
+  &:hover {
+    border: 1px solid #f29f05;
+  }
+}
+.font-color {
+  color: var(--main-color);
+}
+#map {
+  position: relative;
+  border-radius: 5px;
+  @media screen and (max-width: 570px) {
+    width: 90%;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    z-index: 999;
+    border-radius: 50%;
+    border: 2px solid white;
+    transform: translate(-50%, -50%); // 정확히 중앙에 위치하도록 조정
+    background-color: var(--main-color);
+  }
+}

@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-md">
     <div class="container">
-      <a class="navbar-brand" href="#">LOGO</a>
+      <a class="navbar-brand fw-bold" href="#">FindUser</a>
       <button
         class="navbar-toggler"
         type="button"

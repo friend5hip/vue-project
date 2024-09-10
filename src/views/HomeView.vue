@@ -1,5 +1,5 @@
 <template>
-  <div id="map" style="width: 100%; height: 100vh"></div>
+  <div id="map" style="height: 100vh"></div>
 </template>
 
 <script setup>
@@ -92,8 +92,4 @@ onMounted(() => {
 });
 </script>
 
-<style lang="scss" scoped>
-.container {
-  min-height: calc(100vh - 70px);
-}
-</style>
+<style lang="scss" scoped></style>

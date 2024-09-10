@@ -2,13 +2,13 @@
   <div class="container mt-3">
     <div class="row justify-content-center align-items-center">
       <div class="col-md-7 p-3">
-        <h3 class="mb-3 fw-bold text-center">사용자 목록</h3>
+        <h3 class="mb-3 fw-bold text-center font-color">사용자</h3>
         <div class="user-list-wrap">
           <UserListView />
         </div>
       </div>
       <div class="col-md-5 p-3">
-        <h3 class="mb-3 fw-bold text-center">회원가입</h3>
+        <h3 class="mb-3 fw-bold text-center font-color">회원가입</h3>
         <UserSignView />
       </div>
     </div>
@@ -42,6 +42,9 @@ const props = defineProps({});
     border: 1px solid #ddd; /* 스크롤 영역에 경계 추가 */
     border-radius: 5px;
     padding: 10px;
+  }
+  ::-webkit-scrollbar {
+    display: none;
   }
 }
 </style>

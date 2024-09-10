@@ -2,7 +2,7 @@
   <div
     v-for="(item, i) in $store.state.userData"
     :key="i"
-    class="d-flex gap-2 border rounded p-3 mb-3 mt-3"
+    class="userListWrap d-flex gap-2 border rounded p-3 mb-3 mt-3"
   >
     <div class="avatar"><img :src="item.img" alt="" /></div>
     <div>
@@ -41,17 +41,24 @@ const selectUser = (user) => {
 </script>
 
 <style lang="scss" scoped>
-.avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 40px;
+.userListWrap {
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 40px;
+  }
 }
 </style>

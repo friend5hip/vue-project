@@ -1,14 +1,16 @@
 <template>
-  <div class="detailWrap d-flex justify-content-center align-items-center">
+  <div
+    class="detailWrap d-flex justify-content-center align-items-center w-auto p-5"
+  >
     <div
-      class="inner d-flex justify-content-center align-items-center flex-column mb-3"
+      class="inner d-flex justify-content-center align-items-center flex-column"
     >
-      <img :src="$store.state.selectedUser?.img" alt="" class="innerImg mb-2" />
+      <img :src="$store.state.selectedUser?.img" alt="" class="innerImg mb-3" />
       <div class="innerText text-center fw-bold">
         <h1 class="mb-3">{{ $store.state.selectedUser?.userid }}</h1>
-        <h5>비밀번호: {{ $store.state.selectedUser?.password }}</h5>
-        <h5>이름: {{ $store.state.selectedUser?.username }}</h5>
-        <h5>주소: {{ $store.state.selectedUser?.addr }}</h5>
+        <p>비밀번호: {{ $store.state.selectedUser?.password }}</p>
+        <p>이름: {{ $store.state.selectedUser?.username }}</p>
+        <p>주소: {{ $store.state.selectedUser?.addr }}</p>
       </div>
     </div>
     <div class="btn btn-danger" @click="$store.commit('closeDetailModal')">
@@ -21,6 +23,7 @@
 
 <style lang="scss" scoped>
 .detailWrap {
+  transition: 0.3s;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.3); // (r, g, b, opacity)
   top: 0;
@@ -33,11 +36,10 @@
   flex-direction: column;
   .inner {
     background-color: #fff;
-    width: 400px;
-    height: 500px;
     border-radius: 7px;
+    padding: 75px;
     .innerImg {
-      border: 5px solid black;
+      border: 5px solid var(--main-color);
       display: flex;
       justify-content: center;
       align-items: center;
